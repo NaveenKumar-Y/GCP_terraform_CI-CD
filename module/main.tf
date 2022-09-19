@@ -4,16 +4,11 @@ resource "google_compute_instance" "default" {
   machine_type = var.machine_type
   zone = var.zone
 
-
   boot_disk {
     initialize_params {
-
-
-
       image = "debian-cloud/debian-11"
     }
   }
-
 
   network_interface {
     network = "default"
@@ -22,7 +17,6 @@ resource "google_compute_instance" "default" {
       // Ephemeral public IP
     }
   }
-
 
   metadata_startup_script = "echo hi > /test.txt"
 }
