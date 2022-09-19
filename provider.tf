@@ -1,5 +1,5 @@
 provider "google" {
   version = "4.27.0"
-  project = "tonal-affinity-359610"
+  project = "gcp-hum-tachyons"
   credentials = file("serviceaccount.json")
 }
