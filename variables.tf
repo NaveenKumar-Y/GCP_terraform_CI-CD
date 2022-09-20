@@ -15,3 +15,7 @@ variable "network_name" {
 variable "image" {
   
 }
+
+variable "bucket_name"{
+    
+}
