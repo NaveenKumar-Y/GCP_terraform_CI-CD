@@ -1,3 +1,3 @@
-name = "vm-naveen-#{backend-value}#"
-zone = "us-central1-a"
-machine_type = "e2-medium"
+vm_name = "#{vm_name}#"
+zone = "#{zone}#"
+machine_type = "#{machine_type}#"
