@@ -5,10 +5,10 @@ terraform {
       version = "4.27.0"
     }
   }
-  backend "gcs" {
-    bucket = "$(bucket_name)"
-    prefix = "$(backend-value)-statefile"
-    credentials = "serviceaccount.json"
+  // backend "gcs" {
+  //   bucket = "$(bucket_name)"
+  //   prefix = "$(backend-value)-statefile"
+  //   credentials = "serviceaccount.json"
 
-  }
+  // }
 }
