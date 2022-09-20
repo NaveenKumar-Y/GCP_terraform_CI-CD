@@ -6,12 +6,12 @@ resource "google_compute_instance" "default" {
 
   boot_disk {
     initialize_params {
-      image = "debian-cloud/debian-11"
+      image = var.image
     }
   }
 
   network_interface {
-    network = "default"
+    network = var.network_name
 
     access_config {
       // Ephemeral public IP

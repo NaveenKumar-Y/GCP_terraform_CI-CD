@@ -2,9 +2,24 @@ variable "zone" {
 
 }
 
-variable "name" {
+variable "vm_name" {
 
 }
 variable "machine_type" {
+
+}
+
+variable "network_name" {
+  
+}
+variable "image" {
+  
+}
+
+variable "bucket_name" {
+
+}
+
+variable "project_name" {
 
 }
