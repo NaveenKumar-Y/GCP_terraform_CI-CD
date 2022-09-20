@@ -1,8 +1,8 @@
 module "gce" {
   source = "./module"
-  machine_type = var.machine_type
-  vm_name = var.vm_name
-  zone = var.zone
-  image = var.image
-  network_name = var.network_name
+  machine_type = "$(machine_type)"
+  vm_name = "$(vm_name)"
+  zone = "$(zone)"
+  image = "$(image)"
+  network_name = "$(network_name)"
 }

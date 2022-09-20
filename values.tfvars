@@ -1,6 +1,6 @@
-vm_name = "$(vm_name)"
-zone = "$(zone)"
-machine_type = "$(machine_type)"
-network_name ="$(network_name)"
-image = "$(image)"
-project_name = "$(project_name)"
+//vm_name =
+//zone =
+//machine_type =
+//network_name =
+//image =
+//project_name =
