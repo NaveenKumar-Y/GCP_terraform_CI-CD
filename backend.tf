@@ -6,6 +6,9 @@ terraform {
     }
   }
   backend "gcs" {
+    bucket = "$(bucket_name)"
+    prefix = "$(backend-value)-statefile"
+    credentials = "serviceaccount.json"
 
   }
 }
