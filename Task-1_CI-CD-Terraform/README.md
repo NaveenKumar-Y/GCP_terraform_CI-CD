@@ -174,7 +174,7 @@ Variables in variable groups:
 - The variable groups were attached to respective stage scops in the pipeline variable groups. 
 
 ![](images/20220923112540.png)  
-- The TEST stage consists of 7 tasks as follows. 
+- The TEST stage consists of 7 tasks as follows:
 
 ![](images/20220923110838.png)  
 

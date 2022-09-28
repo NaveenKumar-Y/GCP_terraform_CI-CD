@@ -2,7 +2,7 @@
 
 ## Description:
 
- Script to install postgresqldb by getting the software from the bucket and create a demo db and a table on it
+ Script to install postgresqldb by getting the software from the bucket and create a demo db and a table on it.
 
 
 ## How to run
