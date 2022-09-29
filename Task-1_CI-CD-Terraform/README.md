@@ -2,7 +2,7 @@
 
 ## Description:  
 
-Create a CI/CD Pipeline and write a module to provision a VM instance and link the repo to the pipeline. 
+Create a CI/CD Pipeline(Using both Azure Devops pipeline and Github actions) and write a module to provision a VM instance and link the repo to the pipeline. 
 <br> </br>
 ## Terrafom modules:
 
