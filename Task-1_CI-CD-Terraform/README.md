@@ -276,4 +276,54 @@ steps:
 - Create a secret in git repo settings with "serviceaccount.json". make sure to convert json into single line while uploading the key.
 <br></br>
 ![](images/secret.png)  
-- 
+
+- Run terraform init,validate and plan commands in individual steps.
+- Add the env variable serviceaccount.json secret to each step.
+
+```
+      # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
+      - name: Terraform Init
+        working-directory: ./Task-1_CI-CD-Terraform
+        run: terraform init
+        env:
+          GOOGLE_CREDENTIALS: ${{secrets.GOOGLE_CREDENTIALS}}
+      
+      # format code
+      - name: Terraform Format
+        working-directory: ./Task-1_CI-CD-Terraform
+        run: terraform fmt
+
+      # terraform validate
+      - name : terraform validate
+        working-directory: Task-1_CI-CD-Terraform
+        run: terraform validate
+      
+      # Generates an execution plan for Terraform
+      - name: Terraform Plan
+        working-directory: ./Task-1_CI-CD-Terraform
+        run: terraform plan --var-file=values.tfvars
+        env:
+          GOOGLE_CREDENTIALS: ${{secrets.GOOGLE_CREDENTIALS}}
+```
+- Create another job "deployment" with same steps as "test" stage.
+- Add "terraform apply" step to the deployment job which creates a VM.
+- Specify "test" job in the "needs" steps which helps to run deployment job only when "test" job executes successfully.
+
+```
+terraform_deployment:
+    name: 'Terraform Deployment'
+    runs-on: ubuntu-latest
+    needs:
+      - terraform_test
+    environment: deployment
+
+    steps:
+      ...  # terraform install,init,validate and plan steps.
+
+      # applies terraform configuration
+      - name: Terraform Apply
+        working-directory: ./Task-1_CI-CD-Terraform
+        run: terraform apply -auto-approve --var-file=values.tfvars
+        env:
+          GOOGLE_CREDENTIALS: ${{secrets.GOOGLE_CREDENTIALS}}  
+```
