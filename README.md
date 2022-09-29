@@ -4,7 +4,7 @@
 
 [ Task 2 ](https://github.com/Naveen-Yerravarpau-Modak/Tachyons-Gratis-Tasks_Naveen/tree/main/Task-2_Postgres-installation-script) : [Script](https://github.com/Naveen-Yerravarpau-Modak/Tachyons-Gratis-Tasks_Naveen/blob/main/Task-2_Postgres-installation-script/postgres_script.sh) to install postgresqldb by getting the software from the bucket and create a demo db and a table on it.
 
----
+
+<br></br>
 **Note**: Click on highlighted text to navigate to that section or file.
 
----
