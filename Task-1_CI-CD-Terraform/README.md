@@ -237,3 +237,43 @@ Variables in variable groups:
 
 ![](images/20220923113920.png)  
 
+---
+
+# Terraform CI using github actions:
+
+- Create a folder in root directory **".github/workflows"** and create a file **"terraform.yml"**.
+- Specify the name and the branches which acts as the trigger for pipeline to execute.
+```
+name: 'Terraform CI'
+
+on:
+  push:
+    branches:
+      - main
+```
+
+- In the job sections, create a test job with machine as "ubuntu-latest".
+```
+jobs:
+  terraform_test:
+    name: 'Terraform Test'
+    runs-on: ubuntu-latest
+    environment: test
+```
+- Now create steps in the job with steps which executes a sequence of steps that runs the terraform script.
+- Add the actions **"checkout"** which checks-out the repository under $GITHUB_WORKSPACE, so the workflow can access it.
+- Install the terraform package.
+```
+steps:
+      # Checkout the repository to the GitHub Actions runner
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v1 
+```
+- Create a secret in git repo settings with "serviceaccount.json". make sure to convert json into single line while uploading the key.
+<br></br>
+![](images/secret.png)  
+- 

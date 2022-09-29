@@ -32,6 +32,11 @@ jobs:
       - name: Terraform Format
         working-directory: ./Task-1_CI-CD-Terraform
         run: terraform fmt
+
+      # terraform validate
+      - name : terraform validate
+        working-directory: Task-1_CI-CD-Terraform
+        run: terraform validate
       
       # Generates an execution plan for Terraform
       - name: Terraform Plan
@@ -68,6 +73,11 @@ jobs:
       - name: Terraform Format
         working-directory: ./Task-1_CI-CD-Terraform
         run: terraform fmt
+
+      # terraform validate
+      - name: terraform validate
+        working-directory: Task-1_CI-CD-Terraform
+        run: terraform validate
 
       # Generates an execution plan for Terraform
       - name: Terraform Plan
