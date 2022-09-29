@@ -6,5 +6,4 @@
 
 
 <br></br>
-**Note**: Click on highlighted text to navigate to that section or file.
-
+**Note**: _Click on highlighted text to navigate to that section or file._
