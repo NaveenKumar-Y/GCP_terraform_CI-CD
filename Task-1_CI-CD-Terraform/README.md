@@ -327,3 +327,13 @@ terraform_deployment:
         env:
           GOOGLE_CREDENTIALS: ${{secrets.GOOGLE_CREDENTIALS}}  
 ```
+
+### Execution:
+![](images/completed_task.png)  
+
+### Pipeline Completion
+![](images/execution.png)  
+
+### Results:
+- VM got provisioned after pipeline completion.
+![](images/vm.png)  
