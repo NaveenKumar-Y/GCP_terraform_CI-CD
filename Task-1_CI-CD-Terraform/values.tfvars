@@ -1,7 +1,7 @@
 // ****** values for github action CI ******//
 
 machine_type = "e2-medium"
-vm_name = "jfrog-naveen"
+vm_name = "jfrog-naveen-2"
 zone = "us-central1-a"
 boot_image = "debian-cloud/debian-11"
 network_name = "default"
