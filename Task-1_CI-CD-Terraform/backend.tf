@@ -7,7 +7,7 @@ terraform {
   }
   backend "gcs" {                  // this backend block terraform for github actions CI
     bucket = "state-file-mt4015"
-    prefix = "test-github-actions-statefile"
+    prefix = "influxvm-statefile"
   }
 
 
