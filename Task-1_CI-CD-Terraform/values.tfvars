@@ -1,7 +1,7 @@
 // ****** values for github action CI ******//
 
 machine_type = "e2-medium"
-vm_name = "influx-naveen"
+vm_name = "influxdb-naveen"
 zone = "us-central1-a"
 boot_image = "debian-cloud/debian-11"
 network_name = "default"
