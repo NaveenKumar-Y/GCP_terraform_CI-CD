@@ -43,10 +43,9 @@ ln -s /opt/PostgreSQL-14.5/bin/psql /usr/bin/psql
 echo $psqlPassword > /home/pSql_password.txt
 
 # Read database name and table name from the console.
-echo "enter database name:"
-read database_name
-echo "enter table name:"
-read table
+
+database_name=naveen_database
+table=naveen_table1
 
 # switch to postgres user and intialize database 
 # using psql commands create database and a table.
