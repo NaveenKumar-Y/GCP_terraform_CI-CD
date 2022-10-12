@@ -30,5 +30,5 @@ resource "google_compute_instance" "default" {
 
 resource "google_compute_address" "external_ip" {
   name         = "gce-address-external-static"
-  zone         = "us-central1"
+  region         = "us-central1"
 }
