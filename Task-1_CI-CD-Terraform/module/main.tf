@@ -15,8 +15,19 @@ resource "google_compute_instance" "default" {
 
     access_config {
       // Ephemeral public IP
+      nat_ip = "${google_compute_address.external_ip.address}"
     }
   }
 
-  metadata_startup_script = "echo hi > /test.txt"
+  metadata_startup_script = file("${path.root}/startup_script_postgres.sh")
+  
+  service_account {
+    email  = "tachyons-srv-acc@gcp-hum-tachyons.iam.gserviceaccount.com"
+    scopes = ["cloud-platform"]
+  }
+}
+
+
+resource "google_compute_address" "external_ip" {
+  name         = "gce-address-external-static"
 }
