@@ -3,7 +3,7 @@
 # copy postgres software from gcs bucket to current working directory.
 gsutil cp gs://postgresql_software/postgresql-14.5.tar.gz ./
 
-# unpack the postgresql package
+# unpack the postgresql package.
 tar -xzf postgresql-14.5.tar.gz
 
 
