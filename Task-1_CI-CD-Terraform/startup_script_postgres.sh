@@ -54,7 +54,7 @@ su $psqlUser <<EOF
 # intializing the postgres 
 /opt/PostgreSQL-14.5/bin/initdb -D /pgdatabase/data/ -U postgres -A md5 --pwfile=/home/pSql_password.txt
 
-echo "/listen_addresses = '*'" >> /pgdatabase/data/postgresql.conf 
+echo "listen_addresses = '*'" >> /pgdatabase/data/postgresql.conf 
 
 echo "host    all        all         all                   md5" >> /pgdatabase/data/pg_hba.conf
 
