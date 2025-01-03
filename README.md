@@ -1,6 +1,6 @@
 # GCP_terraform_CI-CD
-This repo has tasks to create a GCP compute instance using terraform and spin up the Postgresql server in that Instance.
-Using Azure Devops and GitHub Actions for CI/CD process.
+This repo has tasks to create a GCP compute instance using Terraform and spin up the Postgresql server in that Instance.
+Using Azure Devops and GitHub Actions for CI/CD process. DOCS -  [Azure Devops pipeline](https://github.com/Naveen-Yerravarpau-Modak/Tachyons-Gratis-Tasks_Naveen/tree/main/Task-1_CI-CD-Terraform#build-pipeline) and [Github actions](https://github.com/Naveen-Yerravarpau-Modak/Tachyons-Gratis-Tasks_Naveen/tree/main/Task-1_CI-CD-Terraform#terraform-ci-using-github-actions))
 
 ## Tasks:
 
@@ -10,4 +10,4 @@ Using Azure Devops and GitHub Actions for CI/CD process.
 
 
 <br></br>
-**Note**: _Click on highlighted text to navigate to that section and README file.
+**Note**: Click on highlighted text to navigate to that section and README file.
